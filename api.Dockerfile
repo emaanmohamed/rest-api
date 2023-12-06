@@ -12,7 +12,7 @@ COPY ./go.mod go.sum ./
 RUN go mod download && go mod verify
 
 # Install Compile Daemon for go. We'll use it to watch changes in go files
-RUN go get github.com/githubnemo/CompileDaemon
+RUN go get github.com/githubnemo/CompileDaemon@latest
 
 # Copy and build the app
 COPY . .
